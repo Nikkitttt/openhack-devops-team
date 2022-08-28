@@ -33,7 +33,7 @@ pipeline {
                // some block
                echo 'Dockerhub Login'
                    sh 'docker login -u $dockerUsr -p $dockerPwd'
-                   sh "docker push ${ImgName}: ${params.ImgTag}"
+                   sh "docker push ${ImgName}:${params.ImgTag}"
                    }
                }
           }
