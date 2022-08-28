@@ -32,7 +32,7 @@ pipeline {
                withCredentials([usernamePassword(credentialsId: 'nikkit_dockerhub', passwordVariable: 'dockerPwd', usernameVariable: 'dockerUsr')]) {
                // some block
                echo 'Dockerhub Login'
-                   sh "docker login -u ${dockerUsr} -p ${dockerPwd}"
+                   sh 'docker login -u $dockerUsr -p $dockerPwd'
                    sh "docker push ${ImgName}: ${params.ImgTag}"
                    }
                }
