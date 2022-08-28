@@ -13,8 +13,8 @@ pipeline {
       ImgTag = "${params.ImgTag}"
       WorkDir = "apis/user-java"
     }
-    
-    stages {
+   
+   stages {
         stage('Build Docker Image') {
            steps {
                echo 'Building docker image'
